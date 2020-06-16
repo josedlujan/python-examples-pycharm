@@ -1,0 +1,60 @@
+#variables
+
+#enteros
+
+#cadenas
+d = 'h'
+e = "h"
+
+print(d)
+print(e)
+
+#cambia valores sin problemas
+var = 0
+var = 'Hola'
+print(var)
+
+print(d,e + var)
+
+#Si metemos un numero en datos ya no
+#print(d,e + 2)
+
+#variables en cadenas
+#las cadenas por defecto son Unicode en Python 3 y texto ASCII en python 2
+a = 1
+b = 2
+print(' el num a es {} y el num b es {}'.format(1,b))
+
+c1 = 'aa'
+c2 = "aa"
+c3 = """aa"""
+
+print(c1)
+print(c2)
+print(c3)
+
+#flotantes
+m = 2.9
+print(m)
+
+#no tiene tantos tipos como java, no short, no long, signos, etc.
+
+#No tenemos constantes en python
+
+#Type hints o hinting
+#def metodo(a:int) -> int:
+#return a
+
+#Casting variables
+nu = 10.000002034
+print(nu)
+print(int(nu))
+
+
+#Boolean
+
+k = True
+z = False
+
+
+

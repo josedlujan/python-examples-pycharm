@@ -1,0 +1,77 @@
+import sys
+import requests
+from urllib.request import urlopen
+import lxml.html
+from bs4 import BeautifulSoup
+
+
+#SSL verificacion
+#requests.get('https://josedlujan.com')
+
+#saber el tamaño del body
+h = requests.head('http://www.google.com')
+print (h.headers['content-length'] )
+
+
+import os
+import urllib.request as request
+link = "http://python.org"
+print ("opening url:", link)
+site = request.urlopen(link)
+meta = site.info()
+print ("Content-Length:", site.headers['content-length'])
+
+f = open("out.txt", "r")
+print ("File on disk:",len(f.read()))
+f.close()
+
+
+f = open("out.txt", "wb")
+f.write(site.read())
+site.close()
+f.close()
+
+f = open("out.txt", "r")
+print ("File on disk after download:",len(f.read()))
+f.close()
+
+print ("os.stat().st_size returns:", os.stat("out.txt").st_size)
+
+
+#meta description
+html = urlopen("http://github.com")
+soup = BeautifulSoup(html.read())
+title = soup.title
+print(len(soup.html.head.title.string))
+print(soup.html.head.title.string)
+
+#title = lxml.html.parse("http://github.com")
+#print(title.find(".//title").text)
+
+
+
+
+#doc = lxml.html.document_fromstring("http://ed.team")
+#title_element = doc.xpath('//title')
+#website_title = title_element[0].text_content().strip()
+#meta_description_element = doc.xpath("//meta[@property='description']")
+#website_meta_description = meta_description_element[0].text_content().strip()
+
+''' import http.client
+c = http.client.HTTPSConnection("google.com")
+c.request("GET", "/")
+response = c.getresponse()
+print (response.status, response.reason)
+data = response.read()
+print (data)
+
+import pycurl
+
+curl = pycurl.Curl()
+curl.setopt(pycurl.CAINFO, "myFineCA.crt")
+curl.setopt(pycurl.SSL_VERIFYPEER, 1)
+curl.setopt(pycurl.SSL_VERIFYHOST, 2)
+curl.setopt(pycurl.URL, "https://endlessvideo.com/")
+
+curl.perform()'''
+

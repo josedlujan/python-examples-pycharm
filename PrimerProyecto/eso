@@ -1,0 +1,98 @@
+#recibir dato
+datoA=int(input("Ingrese un número:"))
+datoB=int(input("Ingrese otro número:"))
+datoC=int(input("Ingrese otro número:"))
+
+
+#condicional
+if(datoA>datoB):
+    print(datoA)
+else:
+    print(datoB)
+
+#Operadores:
+'''== Igualdad
+
+!= Desigualdad
+
+< menor
+
+<= menor o igual
+
+> mayor
+
+>= mayor o igual'''
+
+
+#Operadores
+'''
++ suma
+- resta
+* multiplicación
+/ división de flotantes
+// división de enteros
+% resto de una división
+** exponenciación
+'''
+
+#if simple
+#condicional
+if(datoA>datoB):
+    print('simple')
+
+if(datoA>datoB):
+    if(datoA>datoC):
+        print(datoA)
+    else:
+        print(datoC)
+else:
+    if(datoB>datoC):
+        print(datoB)
+    else:
+        print(datoC)
+
+#if con and y or
+
+if(datoA == datoB == datoC):
+    print('Son iguales')
+
+if(datoA > datoB) and (datoA > datoC):
+    print(datoA)
+
+#ciclos
+x=1
+while x<10:
+    print(x)
+    x=x+1
+
+#while para atras
+x1 = 50
+while x1>0:
+    print(x1)
+    x1= x1-1
+
+#while pares
+x2 = 0
+while (x2 < 50):
+    print(x2)
+    x2 = x2 +2
+
+#for
+x = 1
+for x in range(1,10):
+    print(x)
+
+p = 'palabra'
+for letra in p:
+    print(letra)
+
+datos = ['dato1','dato2','dato3']
+for dato in datos:
+    print(dato)
+i=0
+for i in range(50,0,-1):
+    print(i)
+
+for i in range(0,50,2):
+    print(i)
+
